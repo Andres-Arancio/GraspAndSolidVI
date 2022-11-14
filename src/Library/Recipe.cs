@@ -79,8 +79,8 @@ namespace Full_GRASP_And_SOLID
         {
             CountdownTimer timer = new CountdownTimer();
             Adapter client = new Adapter();
+            client.recipe = this;
             timer.Register(GetCookTime(), client);
-            this.Cooked = true;
         }
     }
 }
