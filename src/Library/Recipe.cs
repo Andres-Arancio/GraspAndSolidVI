@@ -13,7 +13,7 @@ namespace Full_GRASP_And_SOLID
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
-        public bool Cooked = false;
+        public bool Cooked {private set; get;}= false;
 
         public Product FinalProduct { get; set; }
 
@@ -75,6 +75,10 @@ namespace Full_GRASP_And_SOLID
             return result;
         }
 
+        public void SetCooked()
+        {
+            this.Cooked = true;
+        }
         public void Cook()
         {
             CountdownTimer timer = new CountdownTimer();

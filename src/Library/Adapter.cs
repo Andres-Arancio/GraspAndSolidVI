@@ -9,7 +9,7 @@ namespace Full_GRASP_And_SOLID
         public Recipe recipe;
         public void TimeOut()
         {
-            recipe.Cooked = true;
+            recipe.SetCooked();
         }
     }
 }
